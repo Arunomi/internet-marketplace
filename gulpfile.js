@@ -54,7 +54,8 @@ function scripts() {
 function libs() {
     return src([
         'node_modules/slick-carousel/slick/slick.css',
-        'node_modules/magnific-popup/dist/magnific-popup.css'
+        'node_modules/magnific-popup/dist/magnific-popup.css',
+        'node_modules/normalize.css/normalize.css'
     ])
         .pipe(scss({ outputStyle: 'compressed' }))
         .pipe(concat('libs.min.css'))

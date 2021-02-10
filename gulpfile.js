@@ -41,9 +41,9 @@ function images() {
 function scripts() {
     return src([
         'node_modules/jquery/dist/jquery.js',
-        'app/js/main.js',
-        'app/js/jquery.magnific-popup.min.js'
-        //сюда добавлять дополнительные библиотеки
+        'node_modules/slick-carousel/slick/slick.js',
+        'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
+        'app/js/main.js'
     ]) 
         .pipe(concat('main.min.js'))
         .pipe(uglify()) 
@@ -51,8 +51,19 @@ function scripts() {
         .pipe(browserSync.stream())
 }
 
+function libs() {
+    return src([
+        'node_modules/slick-carousel/slick/slick.css',
+        'node_modules/magnific-popup/dist/magnific-popup.css'
+    ])
+        .pipe(scss({ outputStyle: 'compressed' }))
+        .pipe(concat('libs.min.css'))
+        .pipe(dest('app/css'))
+        .pipe(browserSync.stream())
+}
+
 function styles() {
-    return src('app/scss/**/*.scss')
+    return src([ 'app/scss/**/*.scss'])
         .pipe(scss({outputStyle: 'compressed'}))
         .pipe(concat('style.min.css'))
         .pipe(autoprefixer({
@@ -67,7 +78,7 @@ function build() {
     return src([
         'app/css/**/*.css',
         'app/fonts/**/*',
-        'app/js/**/*.js',
+        'app/js/main.min.js',
         'app/*.html'
     ], {base: 'app' })
         .pipe(dest('dist'))
@@ -87,4 +98,4 @@ exports.images = images;
 exports.cleanDist = cleanDist;
 
 exports.build = series(cleanDist, images, build);
-exports.default = parallel(styles, scripts, browsersync, watching);
+exports.default = parallel(libs, styles, scripts, browsersync, watching);

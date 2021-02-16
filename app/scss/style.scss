@@ -141,6 +141,9 @@
     padding-right: 30px;
 }
 
+// end search
+// start products
+
 .products {
     background-color: $bg-gray;
     padding: 110px 0px;
@@ -185,6 +188,10 @@
     text-align: start;
     box-shadow: 0 1px 2px rgba(#cdd6de, 0.75);
     margin: 0 5px 30px;
+    transition: all 0.3s;
+    &:hover {
+        box-shadow: 0 16px 20px rgba(#cdd6de, 0.75);
+    }
     &-img {
         min-height: 250px;
         background-repeat: no-repeat;
@@ -246,6 +253,12 @@
     &-star {
         color: #b0bec5;
         font-size: 12px;
+        display: flex;
+        align-items: center;
+        span {
+            color: $main-color;
+            margin: 0 2px;
+        }
     }
 }
 
@@ -273,3 +286,150 @@
         }
     }
 }
+
+// end products
+// start slider
+
+.product-slider {
+    padding: 110px 0 120px;
+}
+
+.product-slider__inner {
+    padding-top: 60px;
+}
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    button {
+        font-size: 0;
+        border: none;
+        border-radius: 50%;
+        background-color: rgb(232, 232, 232);
+        box-shadow: inset 0 1px 1px rgba(#000, 0.25);
+        width: 15px;
+        height: 15px;
+        outline: none;
+        transition: all 0.3s;
+        margin-top: 50px;
+    }
+    li + li {
+        margin-left: 7px;
+    }
+}
+
+.slick-active button {
+    background-color: $accent-color;
+}
+
+// end slider
+// start why section
+
+.why {
+    background-color: $main-color;
+    color: $white;
+}
+
+.why__inner {
+    padding: 120px 0;
+    text-align: center;
+    &-title {
+        color: $white;
+    }
+    &-main {
+        display: flex;
+        justify-content: space-between;
+    }
+    &-column {
+        max-width: 320px;
+    }
+    &-img {
+        width: 113px;
+        height: 113px;
+        margin: 90px auto 35px;
+        border-radius: 50%;
+    }
+    &-name {
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 25px;
+    }
+    &-name--green {
+        color: $accent-color;
+    }
+    &-text {
+        color: #b0bec5;
+        font-size: 15px;
+        line-height: 24px;
+    }
+}
+
+// end why
+// start author
+
+.author {
+    padding: 250px 0 290px;
+    background-repeat: repeat-x;
+}
+
+.author__window {
+    padding: 80px 60px;
+    margin: 0 auto;
+    max-width: 650px;
+    background-color: $accent-color;
+    display: flex;
+    justify-content: space-between;
+    &-text {
+        font-size: 30px;
+        line-height: 36px;
+        color: white;
+        max-width: 50%;
+    }
+    &-btn {
+        text-align: center;
+        vertical-align: center;
+        background-color: $white;
+        color: $main-color;
+        font-size: 18px;
+        max-width: 225px;
+        width: 100%;
+        font-family: inherit;
+        line-height: 72px;
+    }
+}
+
+// end author
+// start tutorial
+
+.tutorial {
+    padding: 70px 120px;
+    &__title {
+        margin-bottom: 60px;
+        text-align: center;
+    }
+}
+
+.tutorial__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tutorial__item {
+    background-color: $bg-gray;
+    &-img {
+        width: 370px;
+        height: 270px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    &-text {
+        font-size: 24px;
+        color: $main-color;
+        font-weight: bold;
+        padding: 28px 15px;
+        text-align: center;
+    }
+}
+
+// end tutorial

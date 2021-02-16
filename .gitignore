@@ -2,3 +2,7 @@ node_modules/
 app/css/
 
 .vs
+
+.DS_Store
+.AppleDouble
+.LSOverride

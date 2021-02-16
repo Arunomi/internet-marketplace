@@ -1,3 +1,130 @@
-@import 'vars';
-@import 'global';
+@import "vars";
+@import "global";
 
+.header__top-bar {
+    background-color: $white;
+}
+
+.header__top-bar-inner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+    align-items: center;
+}
+
+.header__help {
+    margin-left: auto;
+    color: $add-text-color;
+    font-size: 15px;
+    a{
+        color: inherit;
+    }
+}
+
+.header__help--red {
+    color: $red;
+}
+
+.header__buttons {
+    display: flex;
+    align-items: center;
+}
+
+.header__cart {
+    margin-left: 30px;
+}
+
+.header__btn {
+    color:$white;
+    width: 72px;
+    font-size: 12px;
+    text-align: center;
+    padding: 9px;
+    background-color: $accent-color;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+.header__btn + .header__btn {
+    background-color: $red;
+}
+
+.header__menu {
+    background-color: $main-color;
+}
+
+.header__nav {
+    display: flex;
+    height: 60px;
+    align-items: center;
+}
+
+.header__breadcrump {
+    a {
+        color: $white;
+    }
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.header__breadcrump + .header__breadcrump {
+    margin-left: 40px;
+}
+
+.search {
+    background-image: url(../images/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.search__inner {
+    color: $white;
+    text-align: center;
+}
+
+.search__header {
+    margin-top: 150px;
+    margin-bottom: 35px;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.search__text {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.search__bar {
+    display: flex;
+    justify-content: space-between;
+    max-height: 58px;
+    margin: 55px auto 175px;
+    background-color: $white;
+    max-width: 670px;
+    border-radius: 5px;
+}
+
+.search__input, .search__button {
+    background-color: transparent;
+    border: none;
+    padding: 20px;
+}
+
+.search__input {
+    width: 100%;
+}
+
+.search__input::placeholder {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.search__button {
+    font-size: 0;
+    background-image: url(../images/search.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-right: 30px;
+}

@@ -78,3 +78,20 @@ a {
   text-decoration: none;
 }
 
+.container-fluid {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+@media (max-width: 720px) {
+  .container-fluid {
+    padding: 0 15px;
+  }
+}
+
+.title {
+  color: $main-color;
+  font-weight: 700;
+  font-size: 36px;
+}

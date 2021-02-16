@@ -1,6 +1,8 @@
 @import "vars";
 @import "global";
 
+// start header
+
 .header__top-bar {
     background-color: $white;
 }
@@ -17,7 +19,7 @@
     margin-left: auto;
     color: $add-text-color;
     font-size: 15px;
-    a{
+    a {
         color: inherit;
     }
 }
@@ -36,7 +38,7 @@
 }
 
 .header__btn {
-    color:$white;
+    color: $white;
     width: 72px;
     font-size: 12px;
     text-align: center;
@@ -44,6 +46,7 @@
     background-color: $accent-color;
     border-radius: 5px;
     margin-left: 20px;
+    line-height: 12px;
 }
 
 .header__btn + .header__btn {
@@ -72,8 +75,9 @@
     margin-left: 40px;
 }
 
+// start search
+
 .search {
-    background-image: url(../images/bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
@@ -99,26 +103,34 @@
 .search__bar {
     display: flex;
     justify-content: space-between;
-    max-height: 58px;
+    max-height: 56px;
     margin: 55px auto 175px;
     background-color: $white;
     max-width: 670px;
     border-radius: 5px;
+    box-shadow: 0 1px 10px rgba(#7cb240, 0.75);
 }
 
-.search__input, .search__button {
+.search__input,
+.search__button {
     background-color: transparent;
     border: none;
     padding: 20px;
+    outline: none;
+    &:focus {
+        box-shadow: inset 0 0 5px 3px rgba($accent-color, 0.75);
+    }
 }
 
 .search__input {
     width: 100%;
+    color: $main-color;
 }
 
 .search__input::placeholder {
     font-size: 14px;
     font-weight: 500;
+    color: #90a4ae;
 }
 
 .search__button {
@@ -127,4 +139,137 @@
     background-repeat: no-repeat;
     background-position: center;
     padding-right: 30px;
+}
+
+.products {
+    background-color: $bg-gray;
+    padding: 110px 0px;
+    text-align: center;
+}
+
+.products__inner-btn {
+    margin: 60px;
+    button {
+        background-color: $white;
+        border: none;
+        padding: 18px 21px;
+        line-height: 0;
+        font-size: 14px;
+        color: $main-color;
+        cursor: pointer;
+        transition: all 0.3s;
+        outline: none;
+        &:focus {
+            box-shadow: inset 0 0 5px 1px $red;
+        }
+        & + button {
+            margin-left: 5px;
+        }
+        &.mixitup-control-active {
+            background-color: $red;
+            color: $white;
+        }
+    }
+}
+
+.products__inner-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.product__item {
+    background-color: $white;
+    max-width: 442px;
+    width: 100%;
+    text-align: start;
+    box-shadow: 0 1px 2px rgba(#cdd6de, 0.75);
+    margin: 0 5px 30px;
+    &-img {
+        min-height: 250px;
+        background-repeat: no-repeat;
+        display: block;
+        background-position: center;
+    }
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 30px;
+        min-height: 90px;
+        border-bottom: 1px solid #e7ecf2;
+    }
+    &-name {
+        max-width: 310px;
+    }
+    &-title {
+        color: $main-color;
+        font-weight: 500;
+        font-size: 18px;
+        display: block;
+        margin-bottom: 6px;
+    }
+    &-category {
+        color: $accent-color;
+        font-weight: 500;
+        font-size: 14px;
+        display: block;
+    }
+    &-price {
+        font-size: 20px;
+        color: $main-color;
+        font-weight: 700;
+    }
+    &-info {
+        padding: 20px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-author {
+        span {
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            display: inline-block;
+            margin-right: 14px;
+        }
+        color: #546e7a;
+        font-size: 14px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+    }
+    &-star {
+        color: #b0bec5;
+        font-size: 12px;
+    }
+}
+
+.products__bottom-btn {
+    margin-top: 45px;
+
+    button {
+        text-align: center;
+        background-color: $white;
+        border: none;
+        box-shadow: 0 1px 2px rgba(#cdd6de, 0.75);
+        color: $main-color;
+        line-height: 16px;
+        padding: 20px 30px;
+        margin: 0 5px;
+        cursor: pointer;
+        transition: all 0.3s;
+        outline: none;
+        &:focus {
+            box-shadow: inset 0 0 5px 1px $red;
+        }
+        &.mixitup-control-active {
+            background-color: $red;
+            color: $white;
+        }
+    }
 }

@@ -344,23 +344,46 @@
         max-width: 320px;
     }
     &-img {
-        width: 113px;
-        height: 113px;
-        margin: 90px auto 35px;
-        border-radius: 50%;
+        height: 70px;
+        transition: all 0.3s;
+        &-wrapper {
+            width: 113px;
+            height: 113px;
+            border-radius: 50%;
+            background-color: $white;
+            margin: 90px auto 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            & .hearth {
+                padding-top: 10px;
+            }
+        }
     }
+
     &-name {
         font-size: 24px;
         font-weight: 500;
         margin-bottom: 25px;
-    }
-    &-name--green {
-        color: $accent-color;
+        transition: .3s;
     }
     &-text {
         color: #b0bec5;
         font-size: 15px;
         line-height: 24px;
+    }
+}
+
+.why__inner-column:hover {
+    .why__inner-img-wrapper {
+        background-color: $accent-color;
+    }
+    .why__inner-img {
+        filter: invert(100%);
+    }
+    .why__inner-name {
+        color: $accent-color;
     }
 }
 
@@ -456,6 +479,9 @@
 
 .footer__column {
     max-width: 25%;
+    &-sign-up {
+        width: 100%;
+    }
 }
 
 .footer__title {
@@ -544,25 +570,27 @@
         display: block;
         width: 28px;
         height: 28px;
+        border-radius: 2px;
+        background-image: url("../images/media-sprite.png");
     }
 }
 
 .bg-facebook {
-    background: url("../images/media-sprite.png") -0 -0;
+    background-position: -0 -0;
 }
 
 .bg-linkedin {
-    background: url("../images/media-sprite.png") -28px -0;
+    background-position: -28px -0;
 }
 
 .bg-pinterest {
-    background: url("../images/media-sprite.png") -56px -0;
+    background-position: -56px -0;
 }
 .bg-twitter {
-    background: url("../images/media-sprite.png") -84px -0;
+    background-position: -84px -0;
 }
 .bg-youtube {
-    background: url("../images/media-sprite.png") -112px -0;
+    background-position: -112px -0;
 }
 
 .footer__sign-up {
@@ -575,10 +603,11 @@
 }
 
 .footer__input {
-    width: 80%;
+    width: 100%;
     height: 40px;
     border: none;
     padding-left: 15px;
+    padding-right: 55px;
     color: $white;
     box-shadow: inset 1px 1px 0.5px black;
     background-color: #2f3c43;
@@ -592,7 +621,7 @@
     position: absolute;
     right: 0;
     height: 100%;
-    width: 20%;
+    width: 40px;
     background-color: $accent-color;
     background-image: url(../images/icons/location-arrow.svg);
     background-size: 15px;
@@ -601,4 +630,12 @@
     border: none;
     box-shadow: inset -1px 1px 0.5px black;
     cursor: pointer;
+}
+
+.rights {
+    color: #919699;
+    font-size: 15px;
+    text-align: center;
+    border-top: 1px solid #91969955;
+    padding: 25px 0 30px;
 }

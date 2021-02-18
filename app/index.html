@@ -11,11 +11,11 @@
 </head>
 
 <body>
-    <div class="header">
+    <header class="header">
         <div class="header__top-bar">
             <div class="container">
                 <div class="header__top-bar-inner">
-                    <a href="#">
+                    <a class="header__logo-link" href="#">
                         <img class="header__logo" src="images/logo.png" alt="logo">
                     </a>
                     <div class="header__help">
@@ -26,19 +26,156 @@
                         <a class="header__phone" href="tel:61383766284"> +61 3 8376 6284</a>
                     </div>
                     <div class="header__buttons">
-                        <div class="header__cart">
-                            <a href="#" class="cart">
-                                <img src="images/cart.png" alt="">
+                        <!-- adding class alerts__box--off makes the circle unvisible -->
+                        <div class="alerts__box alerts__box--off">
+                            <a href="#" class="alerts header__circle">
+                                <img class="alert__img" src="images/icons/bell.svg" alt="">
+                                <span>8</span>
                             </a>
+                            <ul class="alerts__list">
+                                <li class="alert">
+                                    <a href="#" class="alert__photo"
+                                        style="background-image: url(images/content/user3.jpg);"></a>
+                                    <a href="#" class="alert__info">
+                                        <div class="alert__title">Need WP help!</div>
+                                        <div class="alert__date">21.08.2020</div>
+                                    </a>
+                                    <div class="alert__logo alert__logo--new"></div>
+                                </li>
+                                <li class="alert">
+                                    <a href="#" class="alert__photo"
+                                        style="background-image: url(images/content/user3.jpg);"></a>
+                                    <a href="#" class="alert__info">
+                                        <div class="alert__title">Need WP help!</div>
+                                        <div class="alert__date">21.08.2020</div>
+                                    </a>
+                                    <div class="alert__logo"></div>
+                                </li>
+                                <li class="alert">
+                                    <a href="#" class="alert__photo"
+                                        style="background-image: url(images/content/user3.jpg);"></a>
+                                    <a href="#" class="alert__info">
+                                        <div class="alert__title">Need WP help!</div>
+                                        <div class="alert__date">21.08.2020</div>
+                                    </a>
+                                    <div class="alert__logo"></div>
+                                </li>
+                            </ul>
                         </div>
-                        <a href="#" class="header__btn">Login</a>
-                        <a href="#" class="header__btn">Register</a>
+                        <!-- adding class messages__box--off makes the circle unvisible -->
+                        <div class="messages__box messages__box--off">
+                            <a href="#" class="messages header__circle">
+                                <img class="message__img" src="images/icons/message.svg" alt="">
+                                <span>5</span>
+                            </a>
+                            <ul class="messages__list">
+                                <li class="message">
+                                    <a href="#" class="message__photo"
+                                        style="background-image: url(images/content/user3.jpg);"></a>
+                                    <a href="#" class="message__info">
+                                        <div class="message__name">Kazi Fahim</div>
+                                        <div class="message__title">Need WP help!</div>
+                                        <div class="message__date">21.08.2020</div>
+                                    </a>
+                                    <div class="message__logo message__logo--new"></div>
+                                </li>
+                                <li class="message">
+                                    <a href="#" class="message__photo"
+                                        style="background-image: url(images/content/user3.jpg);"></a>
+                                    <a href="#" class="message__info">
+                                        <div class="message__name">Kazi Fahim</div>
+                                        <div class="message__title">Need WP help!</div>
+                                        <div class="message__date">21.08.2020</div>
+                                    </a>
+                                    <div class="message__logo"></div>
+                                </li>
+                                <li class="message">
+                                    <a href="#" class="message__photo"
+                                        style="background-image: url(images/content/user3.jpg);"></a>
+                                    <a href="#" class="message__info">
+                                        <div class="message__name">Kazi Fahim</div>
+                                        <div class="message__title">Need WP help!</div>
+                                        <div class="message__date">21.08.2020</div>
+                                    </a>
+                                    <div class="message__logo message__logo--reply"></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="cart__box">
+                            <!-- adding class header__circle--off makes the circle unvisible -->
+                            <a href="#" class="header__circle">
+                                <img class="cart" src="images/icons/shopping-cart.svg" alt="">
+                                <span>8</span>
+                            </a>
+                            <div class="cart__hover">
+                                <ul class="cart__hover-list">
+                                    <li><a href="#" htef="#">
+                                            <div class="cart__item">
+                                                <img class="cart__item-img" src="images/content/cart-item.jpg"></img>
+                                                <div class="cart__item-info">
+                                                    <div class="cart__item-name">Grand Ballet</div>
+                                                    <div class="cart__item-category">WordPress</div>
+                                                    <div class="cart__item-price">$59</div>
+                                                </div>
+                                            </div>
+                                        </a></li>
+                                    <li><a href="#" htef="#">
+                                            <div class="cart__item">
+                                                <img class="cart__item-img" src="images/content/cart-item.jpg"></img>
+                                                <div class="cart__item-info">
+                                                    <div class="cart__item-name">Grand Ballet</div>
+                                                    <div class="cart__item-category">WordPress</div>
+                                                    <div class="cart__item-price">$59</div>
+                                                </div>
+                                            </div>
+                                        </a></li>
+                                </ul>
+                                <div class="cart__hover-amount">
+                                    <div class="cart__hover-total">Total</div>
+                                    <div class="cart__hover-price">$118</div>
+                                </div>
+                                <div class="cart__hover-buttons">
+                                    <a href="#" class="cart__hover-button go-to-cart">Go To Cart</a>
+                                    <a href="#" class="cart__hover-button go-to-checkout">Go To Chekout</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user__box">
+                            <!-- adding class user--off makes invisible -->
+                            <a href="#" class="user user--off">
+                                <div class="user__image" style="background-image: url(images/content/user2.jpg);"></div>
+                                <div class="user__info">
+                                    <div class="user__name">Mike Hussy</div>
+                                    <div class="user__balance">$171.00</div>
+                                </div>
+                            </a>
+                            <ul class="user__menu">
+                                <li><a class="angle-right" href="#">Profile Page</a></li>
+                                <li><a class="angle-right" href="#">Portfolio</a></li>
+                                <li><a class="angle-right" href="#">Account Setting</a></li>
+                                <li><a class="angle-right" href="#">Downloads</a></li>
+                                <li><a class="angle-right" href="#">Wishlist</a></li>
+                                <li><a class="angle-right" href="#">Upload Item</a></li>
+                                <li><a class="angle-right" href="#">Statement</a></li>
+                                <li><a class="angle-right" href="#">Widthdraws</a></li>
+                                <li class="header__btn user__menu-logout"><a href="#">Logout</a></li>
+                            </ul>
+                        </div>
+                        <a href="#" class="header__btn header__btn-login">Login</a>
+                        <a href="#" class="header__btn header__btn-register">Register</a>
+                        <a href="#" class="header__btn header__btn-logout header__btn--off">Logout</a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="header__menu">
             <div class="container">
+                <div class="menu__btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
                 <ul class="header__nav">
                     <li class="header__breadcrump"><a href="#">Home</a></li>
                     <li class="header__breadcrump"><a href="#">About</a></li>
@@ -53,7 +190,7 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </header>
     <section class="search" style="background-image: url(../images/bg.jpg);">
         <div class="container">
             <div class="search__inner">
@@ -413,7 +550,8 @@
                 </div>
                 <div class="why__inner-main">
                     <div class="why__inner-column">
-                        <div class="why__inner-img-wrapper"><img src="images/lock.png" alt="" class="why__inner-img"></div>
+                        <div class="why__inner-img-wrapper"><img src="images/lock.png" alt="" class="why__inner-img">
+                        </div>
                         <div class="why__inner-name">
                             Easily Buy & Sell
                         </div>
@@ -423,7 +561,8 @@
                         </div>
                     </div>
                     <div class="why__inner-column">
-                        <div class="why__inner-img-wrapper"><img src="images/gift.png" alt="" class="why__inner-img"></div>
+                        <div class="why__inner-img-wrapper"><img src="images/gift.png" alt="" class="why__inner-img">
+                        </div>
                         <div class="why__inner-name why__inner-name--green">
                             Quality Products
                         </div>
@@ -433,7 +572,8 @@
                         </div>
                     </div>
                     <div class="why__inner-column">
-                        <div class="why__inner-img-wrapper"><img src="images/heart.png" alt="" class="why__inner-img hearth"></div>
+                        <div class="why__inner-img-wrapper hearth"><img src="images/heart.png" alt=""
+                                class="why__inner-img"></div>
                         <div class="why__inner-name">
                             100% Secure Payment
                         </div>
@@ -480,7 +620,7 @@
         <div class="footer__top">
             <div class="container">
                 <div class="footer__inner">
-                    <div class="footer__column">
+                    <div class="footer__column about">
                         <div class="footer__title">
                             About Company
                         </div>
@@ -489,7 +629,8 @@
                             amet
                             urna iat.Praesent vel rutrum purus.
                         </div>
-                        <a href="https://goo.gl/maps/8Eh94EZ2Rf7KtU6o7" class="footer__adress icon-man-marker" target="_blank">
+                        <a href="https://goo.gl/maps/8Eh94EZ2Rf7KtU6o7" class="footer__adress icon-man-marker"
+                            target="_blank">
                             PO Box 16122 Collins Street West
                             Victoria 8007 Australia
                         </a>
@@ -502,11 +643,11 @@
                             Join Our Community
                         </div>
                         <ul class="footer__list">
-                            <li class="footer__list-item"><a href="#">Home</a></li>
-                            <li class="footer__list-item"><a href="#">Forums</a></li>
-                            <li class="footer__list-item"><a href="#">Become an Author</a></li>
-                            <li class="footer__list-item"><a href="#">Community Meetups</a></li>
-                            <li class="footer__list-item"><a href="#">Become an Affiliate</a></li>
+                            <li class="footer__list-item angle-right"><a href="#">Home</a></li>
+                            <li class="footer__list-item angle-right"><a href="#">Forums</a></li>
+                            <li class="footer__list-item angle-right"><a href="#">Become an Author</a></li>
+                            <li class="footer__list-item angle-right"><a href="#">Community Meetups</a></li>
+                            <li class="footer__list-item angle-right"><a href="#">Become an Affiliate</a></li>
                         </ul>
                     </div>
                     <div class="footer__column footer__column-menu">
@@ -514,11 +655,11 @@
                             Need Help?
                         </div>
                         <ul class="footer__list">
-                            <li class="footer__list-item"><a href="#">Help Center</a></li>
-                            <li class="footer__list-item"><a href="#">Foxtar Market Terms</a></li>
-                            <li class="footer__list-item"><a href="#">Author Terms</a></li>
-                            <li class="footer__list-item"><a href="#">Foxtar Licenses</a></li>
-                            <li class="footer__list-item"><a href="#">Contact Us</a></li>
+                            <li class="footer__list-item angle-right"><a href="#">Help Center</a></li>
+                            <li class="footer__list-item angle-right"><a href="#">Foxtar Market Terms</a></li>
+                            <li class="footer__list-item angle-right"><a href="#">Author Terms</a></li>
+                            <li class="footer__list-item angle-right"><a href="#">Foxtar Licenses</a></li>
+                            <li class="footer__list-item angle-right"><a href="#">Contact Us</a></li>
                         </ul>
                     </div>
                     <div class="footer__column footer__column-sign-up">
@@ -541,8 +682,10 @@
                 </div>
             </div>
         </div>
-        <div class="rights">
-            © 2017 Foxtar market place. Trademarks and brands are the property of their respective owners.
+        <div class="container-fluid">
+            <div class="rights">
+                © 2017 Foxtar market place. Trademarks and brands are the property of their respective owners.
+            </div>
         </div>
     </footer>
     <script src="js/main.min.js"></script>

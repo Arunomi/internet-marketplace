@@ -1,10 +1,5 @@
 
 $(function () {
-
-    
-  
-    var mixer = mixitup('.products__inner-box'); //filter
-
     $('.product-slider__inner').slick({  //slickslider
         infinite: true,
         slidesToShow: 4,
@@ -17,6 +12,15 @@ $(function () {
         rating: 3.6,
         starWidth: "12px",
         ratedFill: "#ffa726",
-        readOnly: true        
+        readOnly: true
     });
+
+    $('.menu__btn').on('click', function () {
+        $(this).toggleClass('open')
+        $('.header__nav').slideToggle()
+        $('section').toggle()
+        $('footer').toggle()
+    });
+
+    var mixer = mixitup('.products__inner-box'); //filter
 });

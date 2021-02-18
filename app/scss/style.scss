@@ -402,7 +402,7 @@
 // start tutorial
 
 .tutorial {
-    padding: 70px 120px;
+    padding: 70px 0px;
     &__title {
         margin-bottom: 60px;
         text-align: center;
@@ -416,8 +416,10 @@
 
 .tutorial__item {
     background-color: $bg-gray;
+    transition: all 0.3s;
+    width: 370px;
     &-img {
-        width: 370px;
+        width: 100%;
         height: 270px;
         background-repeat: no-repeat;
         background-size: cover;
@@ -430,6 +432,173 @@
         padding: 28px 15px;
         text-align: center;
     }
+    &:hover {
+        box-shadow: 0 16px 20px rgba(#cdd6de, 0.75);
+    }
 }
 
 // end tutorial
+// start footer
+
+.footer {
+    background-color: $main-color;
+    color: $white;
+    a {
+        color: $white;
+    }
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 110px 0 90px;
+}
+
+.footer__column {
+    max-width: 25%;
+}
+
+.footer__title {
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+
+    &::after {
+        content: "";
+        width: 53px;
+        height: 3px;
+        background-color: $accent-color;
+        display: block;
+        margin: 25px 0 30px;
+    }
+}
+
+.footer__text {
+    font-size: 15px;
+    color: $footer-text-color;
+    padding-bottom: 15px;
+}
+
+.footer__adress,
+.footer__phone {
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+    padding: 10px 0 10px 30px;
+    position: relative;
+    display: block;
+    &::before {
+        position: absolute;
+        left: 0;
+        top: 10px;
+        content: "";
+        display: block;
+        height: 16px;
+        width: 16px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+}
+
+.footer__adress::before {
+    background-image: url(../images/icons/map-marker.svg);
+}
+
+.footer__phone::before {
+    background-image: url(../images/icons/phone.svg);
+}
+
+.footer__list {
+    &-item {
+        padding-left: 15px;
+        font-size: 14px;
+        position: relative;
+        & + & {
+            margin-top: 20px;
+        }
+        a {
+            color: $footer-text-color;
+        }
+        &::before {
+            position: absolute;
+            left: 0;
+            top: 4px;
+            content: "";
+            display: block;
+            height: 12px;
+            width: 12px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            background-image: url(../images/icons/angle-right.svg);
+        }
+    }
+}
+
+.footer__social {
+    display: flex;
+    &-item + &-item {
+        margin-left: 7px;
+    }
+    a {
+        display: block;
+        width: 28px;
+        height: 28px;
+    }
+}
+
+.bg-facebook {
+    background: url("../images/media-sprite.png") -0 -0;
+}
+
+.bg-linkedin {
+    background: url("../images/media-sprite.png") -28px -0;
+}
+
+.bg-pinterest {
+    background: url("../images/media-sprite.png") -56px -0;
+}
+.bg-twitter {
+    background: url("../images/media-sprite.png") -84px -0;
+}
+.bg-youtube {
+    background: url("../images/media-sprite.png") -112px -0;
+}
+
+.footer__sign-up {
+    margin: 40px 0 20px;
+    font-size: 20px;
+}
+
+.footer__form {
+    position: relative;
+}
+
+.footer__input {
+    width: 80%;
+    height: 40px;
+    border: none;
+    padding-left: 15px;
+    color: $white;
+    box-shadow: inset 1px 1px 0.5px black;
+    background-color: #2f3c43;
+    &::placeholder {
+        font-size: 14px;
+        color: #697378;
+    }
+}
+
+.footer__submit {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 20%;
+    background-color: $accent-color;
+    background-image: url(../images/icons/location-arrow.svg);
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    box-shadow: inset -1px 1px 0.5px black;
+    cursor: pointer;
+}

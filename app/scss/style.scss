@@ -75,7 +75,10 @@
     background-color: $accent-color;
 }
 
-.alerts__list, .messages__list, .cart__box, .user__box {
+.alerts__list,
+.messages__list,
+.cart__box,
+.user__box {
     z-index: 1;
 }
 .alerts__box {
@@ -538,8 +541,12 @@
     }
     font-weight: 500;
     font-size: 14px;
+    transition: all 0.1s;
     & + & {
         margin-left: 40px;
+    }
+    :hover {
+        border-bottom: 3px solid $accent-color;
     }
 }
 
@@ -588,6 +595,9 @@
     &:focus {
         box-shadow: inset 0 0 5px 3px rgba($accent-color, 0.75);
     }
+    &:hover {
+        box-shadow: inset 0 0 5px 3px rgba($accent-color, 0.75);
+    }
 }
 
 .search__input {
@@ -607,6 +617,9 @@
     background-repeat: no-repeat;
     background-position: center;
     padding-right: 30px;
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 // end search
@@ -631,6 +644,9 @@
         transition: all 0.3s;
         outline: none;
         &:focus {
+            box-shadow: inset 0 0 5px 1px $red;
+        }
+        &:hover {
             box-shadow: inset 0 0 5px 1px $red;
         }
         & + button {
@@ -732,7 +748,6 @@
 
 .products__bottom-btn {
     margin-top: 45px;
-
     button {
         text-align: center;
         background-color: $white;
@@ -748,6 +763,9 @@
         &:focus {
             box-shadow: inset 0 0 5px 1px $red;
         }
+        &:hover {
+            box-shadow: inset 0 0 5px 1px $red;
+        }
         &.mixitup-control-active {
             background-color: $red;
             color: $white;
@@ -757,7 +775,6 @@
 
 // end products
 // start slider
-
 
 .product-slider {
     padding: 110px 0 120px;
@@ -785,6 +802,9 @@
     }
     li + li {
         margin-left: 7px;
+    }
+    &:hover button {
+        cursor: pointer;
     }
 }
 
@@ -888,7 +908,12 @@
         width: 100%;
         font-family: inherit;
         line-height: 72px;
+        transition: 0.3s;
     }
+}
+
+.author__window-btn:hover {
+    box-shadow: inset 0 0 10px 5px rgba($accent-color, 0.75);
 }
 
 // end author

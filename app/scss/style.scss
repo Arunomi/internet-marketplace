@@ -550,6 +550,123 @@
     }
 }
 
+// end header
+
+// start modal
+.modal {
+    background-color: $accent-color;
+    color: $white;
+    padding: 80px 20px;
+    max-width: 730px;
+    width: 100%;
+    input {
+        max-width: 400px;
+        width: 100%;
+        color: $white;
+        background-color: #76ae36;
+        border: none;
+        outline: none;
+        font-size: 14px;
+        line-height: 43px;
+        padding: 0px 20px 0px 40px;
+        height: 43px;
+        margin: 0 auto 10px;
+        &::placeholder {
+            color: $white;
+        }
+    }
+}
+
+%logo-position {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.login {
+    &__title {
+        text-transform: uppercase;
+        font-size: 48px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    &__form {
+        margin: 0 auto;
+        max-width: 400px;
+    }
+    &__name {
+        position: relative;
+        &::before {
+            @extend%logo-position;
+            width: 14px;
+            height: 14px;
+            left: 18px;
+            background-image: url(../images/icons/user.svg);
+        }
+    }
+    &__password {
+        position: relative;
+        &::before {
+            @extend%logo-position;
+            width: 14px;
+            height: 14px;
+            left: 18px;
+            background-image: url(../images/icons/lock.svg);
+        }
+    }
+    &__buttons-wrapper {
+        max-width: 400px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0 15px;
+    }
+    &__submit {
+        max-width: 140px;
+        width: 100%;
+        height: 48px;
+        background-color: $white;
+        border: none;
+        color: #000;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 700;
+        display: block;
+        margin-right: 10px;
+    }
+    &__create {
+        max-width: 250px;
+        width: 100%;
+        height: 48px;
+        background-color: #76ae36;
+        color: $white;
+        display: inline-block;
+        line-height: 48px;
+        padding-left: 30px;
+        text-align: center;
+        font-size: 18px;
+        position: relative;
+        &::before {
+            @extend %logo-position;
+            height: 20px;
+            width: 20px;
+            background-image: url(../images/icons/edit.svg);
+        }
+    }
+    &__lost {
+        color: $white;
+        font-size: 18px;
+    }
+}
+
+// end modal
+
 // start search
 
 .search {

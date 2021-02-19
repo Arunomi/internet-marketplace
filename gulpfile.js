@@ -44,7 +44,8 @@ function scripts() {
         'node_modules/slick-carousel/slick/slick.js',
         'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
         'app/js/main.js',
-        'node_modules/mixitup/dist/mixitup.js'
+        'node_modules/mixitup/dist/mixitup.js',
+        'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js'
     ]) 
         .pipe(concat('main.min.js'))
         .pipe(uglify()) 
@@ -56,7 +57,8 @@ function libs() {
     return src([
         'node_modules/slick-carousel/slick/slick.css',
         'node_modules/magnific-popup/dist/magnific-popup.css',
-        'node_modules/normalize.css/normalize.css'
+        'node_modules/normalize.css/normalize.css',
+        'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css'
     ])
         .pipe(scss({ outputStyle: 'compressed' }))
         .pipe(concat('libs.min.css'))

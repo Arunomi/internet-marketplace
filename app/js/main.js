@@ -27,11 +27,14 @@ $(function () {
         $('.new-items__sort-list').toggleClass('new-items__sort--active')
         $('.new-items__content-box').addClass('new-items__content-box--grid')
         $('.new-items__content-box').removeClass('new-items__content-box--list')
+        $('.product__item').css('display','block')
     });
     $('.new-items__sort-list').on('click', function() {
         $(this).toggleClass('new-items__sort--active')
         $('.new-items__sort-grid').toggleClass('new-items__sort--active')
         $('.new-items__content-box').addClass('new-items__content-box--list')
+        $('.product__item').css('display','none')
+        $('.product__item:nth-last-child(-n+8)').css('display','block')
         $('.new-items__content-box').removeClass('new-items__content-box--grid')
     });
 
@@ -97,6 +100,16 @@ $(function () {
         }
     })
     //select menu end//
+
+    $(".aside__price-slider").ionRangeSlider({ //price slider
+        skin: "round",
+        type: "double",
+        min: 0,
+        max: 1000,
+        from: 0,
+        to: 600,
+        prefix: "$"
+    });
 
     var mixer = mixitup('.products__inner-box'); //filter
 });
